@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="Brain_GenIII.com.ti.ccstudio.buildDefinitions.MSP430.executableProjectType.397777573" name="MSP430 Executable" projectType="com.ti.ccstudio.buildDefinitions.MSP430.executableProjectType">
+<configuration artifactExtension="out" artifactName="Brain_GenIII" cleanCommand="${CCE_INSTALL_ROOT}/utils/Cygwin/rm -rf" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208" name="Debug" parent="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug">
+<toolChain id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.DebugToolchain.624665214" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.linkerDebug.1736052870">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1052368866" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="3.1.0" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.582725243" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=MSP430F5438"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=lnk_msp430f5438.cmd"/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=rts430x.lib"/>
+<listOptionValue builtIn="false" value="IS_ASSEMBLY_ONLY=false"/>
+</option>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.SILICON_VERSION.1883367628" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.SILICON_VERSION.mspx" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.PRINTF_SUPPORT.1248755808" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.PRINTF_SUPPORT" value="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.PRINTF_SUPPORT.minimal" valueType="enumerated"/>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.linkerDebug.1736052870" name="MSP430 Linker v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.linkerDebug">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.LIBRARY.70040059" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.LIBRARY" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;rts430x.lib&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.HEAP_SIZE.129479428" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.HEAP_SIZE" value="160" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.STACK_SIZE.1501694779" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.STACK_SIZE" value="160" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.USE_HW_MPY.604771577" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.USE_HW_MPY" value="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.USE_HW_MPY.F5" valueType="enumerated"/>
+</tool>
+<macros/>
+</toolChain>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/time.c" name="time.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/time.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/time.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/time.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1112011235" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/thermo.c" name="thermo.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/thermo.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/thermo.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/thermo.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.219063257" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/t0.c" name="t0.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/t0.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/t0.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/t0.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.436155482" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sysact.c" name="sysact.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sysact.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sysact.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sysact.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1219584095" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/stbl.c" name="stbl.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/stbl.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/stbl.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/stbl.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.27339574" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sram.c" name="sram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.410456133" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/spi.c" name="spi.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/spi.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/spi.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/spi.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1273109528" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/serial.c" name="serial.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/serial.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/serial.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/serial.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.776325299" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sensor.c" name="sensor.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sensor.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sensor.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sensor.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1017877408" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/senseact.c" name="senseact.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/senseact.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/senseact.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/senseact.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1894796222" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sdspi.c" name="sdspi.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdspi.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdspi.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdspi.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.523421566" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sdlod.c" name="sdlod.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdlod.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdlod.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdlod.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.150890163" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sdctl.c" name="sdctl.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdctl.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdctl.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdctl.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1799123032" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/sdcom.c" name="sdcom.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdcom.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdcom.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/sdcom.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2089599037" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/rts.c" name="rts.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rts.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rts.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rts.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.673013179" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/rom.c" name="rom.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rom.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rom.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rom.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1062869929" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/report.c" name="report.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/report.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/report.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/report.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.46370519" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/rand.c" name="rand.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rand.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rand.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rand.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1280111391" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/radio.c" name="radio.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/radio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/radio.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/radio.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1311426903" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/rad40.c" name="rad40.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rad40.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rad40.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/rad40.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1094030445" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/pick.c" name="pick.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/pick.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/pick.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/pick.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.792113708" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/opmode.c" name="opmode.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/opmode.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/opmode.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/opmode.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1675221222" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/msg.c" name="msg.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/msg.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/msg.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/msg.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.64632127" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/misc.c" name="misc.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/misc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/misc.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/misc.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.585523291" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/main.c" name="main.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/main.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/main.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/main.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.834282924" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/l2sram.c" name="l2sram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/l2sram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/l2sram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/l2sram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.866845042" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/l2fram.c" name="l2fram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/l2fram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/l2fram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/l2fram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1763999522" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/l2flash.c" name="l2flash.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/l2flash.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/l2flash.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/l2flash.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1384298692" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/key.c" name="key.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/key.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/key.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/key.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2101827976" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/irupt.c" name="irupt.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/irupt.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/irupt.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/irupt.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1881122517" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/gid.c" name="gid.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/gid.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/gid.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/gid.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1917114666" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/fulldiag.c" name="fulldiag.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/fulldiag.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/fulldiag.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/fulldiag.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.488295925" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/fram.c" name="fram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/fram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/fram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/fram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1486524012" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/flash.c" name="flash.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/flash.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/flash.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/flash.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1426217622" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/dradio.c" name="dradio.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/dradio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/dradio.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/dradio.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1741974496" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/discover.c" name="discover.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/discover.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/discover.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/discover.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.272723126" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/diag.c" name="diag.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/diag.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/diag.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/diag.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.908381232" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/delay.c" name="delay.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/delay.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/delay.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/delay.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.920923977" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/daytime.c" name="daytime.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/daytime.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/daytime.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/daytime.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.265630301" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/crc.c" name="crc.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/crc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/crc.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/crc.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.137112702" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/config.c" name="config.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/config.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/config.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/config.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.244583055" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/cmd.c" name="cmd.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/cmd.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/cmd.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/cmd.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.593831166" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/buz.c" name="buz.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/buz.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/buz.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/buz.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.68701135" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/button.c" name="button.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/button.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/button.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/button.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.55276694" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/bigsub.c" name="bigsub.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/bigsub.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/bigsub.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/bigsub.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1651030778" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/ad.c" name="ad.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/ad.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/ad.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/ad.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.663162870" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/action.c" name="action.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/action.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/action.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/action.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.827118473" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/NUMCMD.C" name="NUMCMD.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/NUMCMD.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/NUMCMD.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/NUMCMD.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.511576083" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/MODSTORE.C" name="MODSTORE.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/MODSTORE.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/MODSTORE.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/MODSTORE.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.181955467" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/MODOPT.C" name="MODOPT.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/MODOPT.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/MODOPT.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/MODOPT.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.698559842" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/MODACT.C" name="MODACT.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/MODACT.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/MODACT.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/MODACT.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.822002411" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.debug.263559208./Brain_GenIII/src/LNKBLK.C" name="LNKBLK.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/LNKBLK.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/LNKBLK.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350./Brain_GenIII/src/LNKBLK.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerDebug.816244350">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.430165162" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+</configuration>
+<configuration artifactExtension="out" artifactName="Brain_GenIII" cleanCommand="${CCE_INSTALL_ROOT}/utils/Cygwin/rm -rf" description="" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184" name="Release" parent="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release">
+<toolChain id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.ReleaseToolchain.1338365618" name="TI Code Generation Tools" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.linkerRelease.682553228">
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1142864401" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="3.1.0" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1962038785" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=MSP430F5438"/>
+<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=lnk_msp430f5438.cmd"/>
+<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=rts430x.lib"/>
+<listOptionValue builtIn="false" value="IS_ASSEMBLY_ONLY=false"/>
+</option>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.SILICON_VERSION.374778580" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.SILICON_VERSION" value="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.SILICON_VERSION.mspx" valueType="enumerated"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.PRINTF_SUPPORT.1797874529" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.PRINTF_SUPPORT" value="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.PRINTF_SUPPORT.minimal" valueType="enumerated"/>
+</tool>
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.linkerRelease.682553228" name="MSP430 Linker v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.linkerRelease">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.LIBRARY.1765181363" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.LIBRARY" valueType="stringList">
+<listOptionValue builtIn="false" value="&quot;rts430x.lib&quot;"/>
+</option>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.HEAP_SIZE.495994335" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.HEAP_SIZE" value="160" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.STACK_SIZE.811067737" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.STACK_SIZE" value="160" valueType="string"/>
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.USE_HW_MPY.2105195322" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.USE_HW_MPY" value="com.ti.ccstudio.buildDefinitions.MSP430_3.1.linkerID.USE_HW_MPY.F5" valueType="enumerated"/>
+</tool>
+</toolChain>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/time.c" name="time.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/time.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/time.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/time.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.270407344" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/thermo.c" name="thermo.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/thermo.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/thermo.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/thermo.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.201056173" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/t0.c" name="t0.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/t0.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/t0.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/t0.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.461493988" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sysact.c" name="sysact.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sysact.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sysact.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sysact.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.358291676" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/stbl.c" name="stbl.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/stbl.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/stbl.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/stbl.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1352819231" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sram.c" name="sram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2051935076" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/spi.c" name="spi.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/spi.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/spi.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/spi.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.566770103" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/serial.c" name="serial.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/serial.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/serial.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/serial.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.220996137" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sensor.c" name="sensor.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sensor.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sensor.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sensor.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.157848487" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/senseact.c" name="senseact.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/senseact.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/senseact.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/senseact.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1960563953" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sdspi.c" name="sdspi.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdspi.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdspi.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdspi.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1556864417" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sdlod.c" name="sdlod.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdlod.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdlod.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdlod.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.224904001" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sdctl.c" name="sdctl.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdctl.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdctl.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdctl.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.104573334" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/sdcom.c" name="sdcom.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/sdcom.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdcom.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/sdcom.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.435032561" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/rts.c" name="rts.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rts.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rts.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rts.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.731836687" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/rom.c" name="rom.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rom.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rom.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rom.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1683689447" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/report.c" name="report.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/report.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/report.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/report.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1602683358" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/rand.c" name="rand.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rand.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rand.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rand.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1027308443" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/radio.c" name="radio.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/radio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/radio.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/radio.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.790255873" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/rad40.c" name="rad40.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/rad40.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rad40.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/rad40.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1424672010" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/pick.c" name="pick.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/pick.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/pick.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/pick.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.253953355" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/opmode.c" name="opmode.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/opmode.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/opmode.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/opmode.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.529466947" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/msg.c" name="msg.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/msg.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/msg.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/msg.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.949758113" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/misc.c" name="misc.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/misc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/misc.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/misc.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1478071623" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/main.c" name="main.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/main.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/main.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/main.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2120767336" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/l2sram.c" name="l2sram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/l2sram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/l2sram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/l2sram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1861113638" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/l2fram.c" name="l2fram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/l2fram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/l2fram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/l2fram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.845288266" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/l2flash.c" name="l2flash.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/l2flash.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/l2flash.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/l2flash.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1038568156" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/key.c" name="key.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/key.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/key.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/key.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1011643003" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/irupt.c" name="irupt.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/irupt.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/irupt.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/irupt.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2060086166" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/gid.c" name="gid.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/gid.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/gid.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/gid.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2110366049" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/fulldiag.c" name="fulldiag.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/fulldiag.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/fulldiag.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/fulldiag.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.608636852" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/fram.c" name="fram.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/fram.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/fram.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/fram.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.819246751" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/flash.c" name="flash.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/flash.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/flash.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/flash.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1056908388" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/dradio.c" name="dradio.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/dradio.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/dradio.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/dradio.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1102661825" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/discover.c" name="discover.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/discover.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/discover.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/discover.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1065807123" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/diag.c" name="diag.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/diag.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/diag.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/diag.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2067987823" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/delay.c" name="delay.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/delay.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/delay.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/delay.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1714784820" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/daytime.c" name="daytime.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/daytime.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/daytime.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/daytime.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2082877700" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/crc.c" name="crc.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/crc.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/crc.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/crc.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2102273251" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/config.c" name="config.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/config.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/config.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/config.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.385638287" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/cmd.c" name="cmd.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/cmd.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/cmd.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/cmd.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1349178223" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/buz.c" name="buz.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/buz.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/buz.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/buz.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.2066400599" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/button.c" name="button.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/button.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/button.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/button.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.111919025" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/bigsub.c" name="bigsub.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/bigsub.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/bigsub.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/bigsub.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.759943520" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/ad.c" name="ad.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/ad.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/ad.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/ad.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1010681648" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/action.c" name="action.c" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/action.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/action.c">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/action.c" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.123099177" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/NUMCMD.C" name="NUMCMD.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/NUMCMD.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/NUMCMD.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/NUMCMD.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.1384177923" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/MODSTORE.C" name="MODSTORE.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/MODSTORE.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/MODSTORE.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/MODSTORE.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.465788542" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/MODOPT.C" name="MODOPT.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/MODOPT.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/MODOPT.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/MODOPT.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.908181976" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/MODACT.C" name="MODACT.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/MODACT.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/MODACT.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/MODACT.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.747662578" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+<resourceConfiguration exclude="false" id="com.ti.ccstudio.buildDefinitions.MSP430.exe.Release.1383831184./Brain_GenIII/src/LNKBLK.C" name="LNKBLK.C" rcbsApplicability="disable" resourcePath="/Brain_GenIII/src/LNKBLK.C" toolsToInvoke="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/LNKBLK.C">
+<tool id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062./Brain_GenIII/src/LNKBLK.C" name="MSP430 Compiler v3.1" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.exe.compilerRelease.1045698062">
+<option id="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY.88850705" superClass="com.ti.ccstudio.buildDefinitions.MSP430_3.1.compilerID.OBJ_DIRECTORY" value="&quot;src&quot;" valueType="string"/>
+</tool>
+</resourceConfiguration>
+</configuration>
+</project>
+</ManagedProjectBuildInfo>

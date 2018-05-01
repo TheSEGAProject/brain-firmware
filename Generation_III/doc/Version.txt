@@ -1,0 +1,635 @@
+* V3.36 07/28/2008 wzr
+*		 1. Patched bug in ROM2 to stash LNKREQ on 1st msg not 2nd msg
+*
+* V3.35 07/20/2008 wzr
+*		 1. Patched bug in ROM2 stash of LNKREQ on a single msg
+*		 2. Added code to show the wisard uptime on the action line
+*
+* V3.34 07/18/2008 wzr
+*		 1. Cosmetic changes to SYSTAT
+*		 2. Removed references to DCNT algorithm
+*		 3. Changed Discovery to allow multiple inbound links
+*		 4. Patched bug in spoke outbound discovery to move slot up to 8+base
+*
+* V3.33 07/17/2008 wzr
+*		 1. Patched scheduler to handle 2 kinds of link failures static & dynamic
+*
+* V3.32 07/16/2008 wzr
+*		 1. Instrumented scheduler to catch scheduler bug
+*		 2. Patched bug in scheduler that dropped links if a Collision Occurred.
+*
+* V3.31 07/13/2008 wzr
+*		 1. Patched design flaw in Discovery that allows a spoke that has
+*			already been discovered to consistently miss SDC4's because
+*			of perfect non-alignment of timing.
+*		 2. Patched address calculation error in storage of lnkblk times.
+*
+* V3.30 07/07/2008 wzr
+*		 1. Added code to check if a link time as been passed up.
+*		 2. Added code to show ver number that is running
+*		 3. Patched bug in Discover that used an old time base to compute
+*		    the next linkup time.
+*
+* V3.29 06/26/2008 wzr
+*		 1. Attempting to fix the radio link break bug.
+*		    Added scheduler table LNKBLK_IDX_TBL so that load factor
+*		    can be immediately turned into a link time rather than
+*			waiting for the scheduler to run.
+*		 2. Added new module LNKBLK.C to hold the new software routines
+*
+* V3.28 06/26/2008 wzr
+*		 1. Added Sniffer diagnostic to FullDiag runtime diagnostics.
+*
+* V3.27 05/09/2008 wzr
+*		 1. Added frequency selection to radio diagnostic.
+*
+* V3.26 05/01/2008 wzr
+*		 1. Changed Daytime to accept '/' or ':' between date values
+*		 2. Changed Check on FRAM to allow skipping formatting, but defaults to
+*			formatting if not interceded by operator.
+*		 3. Added diagnostic to FULLDIAG so that operators can hear wiz sounds.
+*
+* V3.25 02/11/2008 wzr
+*		 1. Added code to allow diagnostics to setup one-time runtime options
+*		 2. Removed REPORTING_OFF, REPORTING_FLASH_ONLY, REPORTING_RADIO_ONLY,
+*			and REPORTING_RADIO_AND_FLASH definitions.
+*		 3. Shortened all the strings to make room for coming code
+*		 4. Removed the SPEST module (moved it to the PC)
+*		 5. Changed SDLOD so that when waiting it will beep at illegal chars
+*		 6. Swapped the diag and SDLOD command numbers to avoid double char hit
+*
+*
+* V3.24 11/26/2007 wzr
+*		 1. Removed unused defines in SN.h
+*		 2. Renamed SN.* to be ROM.* to better reflect their function.
+*		 3. Removed compile flag COMPILE_IN_SDLOD_KEY_CMD (never in now).
+*		 4. Removed compile flag LOAD_RUNTIME_DIAGS (always loaded now).
+*		 5. Removed compile flag DIAG_SELECTED (runs it always now)
+*		 6. Removed compile flag UNUSED_1 (not in use anyway).
+*		 7. Removed compile flag UNUSED_2 (not in use anyway).
+*		 8. Renamed KEYACT.* to be MODIFY.* to better reflect their function.
+*		 9. Removed compile flag RUN_SDLOD_DIRECT (compile it in always now)
+*		10. Relabeled the configuration bits in the FRAM
+*		11. Added the OPTION module to handle user settable options.
+*		12. Added functions strlen & padded Sout to SERIAL.C to save str space
+*		13. Updated the FRAM ver to 2.09
+*		14. Hooked in code for L2FRAM init
+*		15. Added new module NUMCMD.c for numeric commands
+*		16. Converted key.c over to numeric commands
+*		17. Removed all references to CMD.c
+*		18. Added new module MODSTORE.c for modifying storage commands
+*		19. Renamed modify.c to be MODACT.C
+*		20. Added in all functionality to change option bits and roles
+*		21. Hooked runtime bits into the system: STREAMING, SHOW_SYSTAT,
+*			CHECK_FOR_RADIO_BOARD, USE_RADIO_FOR_BEG_RANDOM_SEED,
+*			SEND_RADIO_STARTUP_MSG, ALLOW_STARTUP_BRAIN_HIBERNATION,
+*			SD_BOARD_IS_ATTACHED, CHECK_FOR_SD_ON_STARTUP,
+*			CORRECT_SOIL_READINGS, DO_HIBERNATION_CHECK, BUZZER_ON
+*			CHECK_FOR_FRAM_ON_STARTUP, CHECK_FOR_FRAM_FORMAT_ON_STARTUP,
+*			CHECKING_FOR_FLASH_ON_STARTUP, SHOW_STATS_ON_LFACTORS,
+*			SHOW_LINKUP_SCHEDULE,
+*		22. Removed ucSHADOW_SYS_FLAGS
+*		23. renamed COMPILE_FOR_WIZ2_DUKESHIP to COMPILE_DEFAULT_WIZ
+*		24. Added routine to check if writing to SRAM is alloed for a msg
+*		25. Added the WHO_CAN_RUN table in ACTION.C
+*		26. Hooked option bits into fram formatting
+*		27. Hooked option bits into startup SRAM table setup
+*		28. Modified all old calls to isHub.
+*		29. Removed all old build bits
+*		30. Removed the old compile personalities
+*		31. Changed sys to allow an empty FRAM StBlk tbl will come up sleeping
+*		32. Fixed bug in STBL.C init tables.
+*		33. Compiled with perl now
+*
+*
+* V3.23 09/19/2007 wzr
+*		 1. Corrected the soil moisture diagnostic in FULLDIAG.C to wait
+*			wait between readings to more accurately simulate a read request
+*			during normal operations.
+*		 2. Added mew module (SPEST.C) to correct the soil moisture readings
+*			due to the electrical leak in the mosfet switching of
+*			multiplexer 1 of the A/D circuit.
+*		 3. Added a new compile switch in DIAG.H so that the soil moisture
+*			correction routine can be removed when the hardware is fixed.
+*		 4. Added calls in FULLDIAG.C so that soil moisture readings will
+*			also show the corrected readings.
+*
+* V3.22b 10/20/2007 wzr
+*		 1. Changed SENSOR.H for full reporting of brain activities
+*		 2. Cosmetic changes to SENSOR.H to indicate LINK MADE and LINK LOST.
+*		 3. Fixed bug in OPMODE.C and DISCOVER.C define was BUCKUP changed to BACKUP
+*		 4. Changed OPMODE.C and DISCOVER.C to match names in SENSOR.H
+*		 5. Changed ver number in main to reflect this is a debug ver
+*		 6. Added optional ver subcode for debugging
+*		 7. Removed unused code in MSG.C
+*		 8. Modified routine in REPORT.C to handle link Make and break.
+*		 9. Fixed naming confusion converted flash_backup to move_sram_to_flash
+*		10. Expunged all references to flash backup.
+*		11. Changed streaming to copy to flash as well as copy to console
+*		12. Folded Status Reporting into a single grouping in DIAG.H
+*		13. Converted ROM2/SOM2 msgs to a single unified reporting scheme
+*		14. Wired in the ROM2/SOM2 msgs into OPMODE.C
+*		15. Wired in the ROM2/SOM2 msgs into DISCOVERY.C
+*		16. Added code to allow incremental OM2 additions (REPORT.C)
+*		17. Added handy routine to stuff a single Sensor Num and Sensor data pair. (OPMODE.C)
+*		18. Added routine to create empty OM2 hulls (REPORT.C)
+*		19. Fixed bug in OPMODE.C when building empty hull OM2's. (OPMODE.C)
+*		20. moved battery reporting over to gerneralized reporting. (ACTION.C)
+*		21. moved Clock reporting over to generalized reporting. (ACTION.C)
+*		22. Added reporting flags for DEAD BATTERY, BATT_VOLTAGE, TIME_CHANGES
+*		23. Modified reporting code to handle the new reporting flag (REPORT.C)
+*		24. Modified SENSOR.C to handle new sensor values
+*		25. Fixed SOM2 so that it will terminate on msg send 6 to avoid resend of half msgs
+*		26. Patched retrieveMsg_OM2 in OPMODE.c so that it looks ahead for empty SRAM.
+*		27. Reduced Msg sizes in DISCOVERY.C & OPMODE.C to conserve space
+*		28. Added routines to show the SRAM copy of SSP tables.
+*		29. Added code to do special reporting for TC's in SSP tables
+*		30. Patched bug in last PKT flagging in OPMODE.C
+*		31. Added console msg to report storage status on startup (MAIN.C)
+*		32. Patched reporting bug in DISCOVER.C
+*		33. Patched bug in NEW DATA PT code for Delta = 0 (PICK.C)
+*		34. Patched bug in soil moisture extra 2 bytes during upload.
+*		35. Added 20 messages to brain board msg for tracking UPLOAD errors
+*		36. Fixed CRC error from Center Wisard during upload
+*		37. Patched confirm to accept LF for confirm (compabitility with Linux)
+*		38. Added formal confirm function to SERIAL.C
+*		39. Patched Main.C to show SD, SDmsg, and FRAM vers in HEX not DEC.
+*
+* V3.22a 10/16/2007 wzr
+*		 1. Merged Kenji's call turn on's in ACTION.C
+*		 2. Merged Kenji's patches to PICK.C 
+*		 3. Left unchanged Alex's name change to define in SYSACT.C
+*		 4. Merged Alex's CR-LF call in STBL.C
+*		 5. Merged Alex's CR-LF call in KEY.C
+*		 6. Merged Alex's changes to OPMODE.C
+*		 7. Merged Alex's changes to DISCOVER.C
+*		 8. Merged cosmetic change for HUMBOLT to HUMBOLDT
+*
+* V3.22 04/20/2007 wzr
+*		 1. Changed Thermo.C to be completely table driven.
+*		 2. Cosmetic changes to show tables command (was too spacy).
+*		 3. Added compiler switch to shut off systat messages for field systems.
+*
+* V3.21 02/14/2007 wzr
+*		 1. Patched typo in SD receive check routine to handle double size msgs.
+*		 2. Patched bug in SD receive check routine to allow sensor number 4.
+*
+* V3.20 02/14/2007 wzr
+*		 1. Added more checking for the SPI bus messaging to SD board.
+*		 2. Did cosmetic changes to comments in main code to reduce size
+*
+* V3.19 01/02/2007 wzr
+*		 1. Changed ECLK status routine to disallow disable flag.
+*		 2. Added ECLK report in startup message
+*		 3. Changed showMsgBuffer to show names as well as values.
+*		 4. Fixed Bug in Sensor number unpacker.
+*
+* V3.18 12/24/2006 wzr
+*		 1. Added new module PICK.C to handle "Picking of Sensor readings".
+*		 2. Added routines to access (read/write) the SSP tables.
+*		 3. Added trigger area to FRAM
+*		 4. Changed Fram Ver to 2.08
+*		 5. Added routines to initialize FRAM trigger area
+*		 6. Added routines to initialzie SRAM SSP tables
+*		 7. Added text SRAM table base routines
+*		 8. Hooked table base name routines into SRAM (put and get)
+*
+* V3.17 12/20/2006 wzr
+*		 1. Added the new scheduler table SENSE_ACT.
+*		 2. Added the new Sensor Table SSP_Y_TBL.
+*		 3. Added the new Sensor Table SSP_T_TBL.
+*		 4. Added the new Sensor Table SSP_DELTA_Y_TRIG.
+*		 5. Added the new Sensor Table SSP_DELTA_T_TRIG.
+*		 6. Hooked up established code to handle SENSE_ACT table.
+*		 7. Added SENSE_ACT compiled values for existing actions.
+*		 8. Added new module SENSACT.C to help with SENSE_ACT table.
+*		 9. Changed FRAM V2.07 format to include SENSE_ACT values for startup.
+*		10. Changed L2FRAM_putStBlkEntry() to take a ulong value for data.
+*		11. Added sense act short name function
+*		12. Changed sense action action names to be "Sens".
+*		13. Changed show Sched tbls to show SenseActs in text.
+*		14. Removed all specialized Sensing functions from ACTION.c
+*		15. Added display of SENSE_ACT table in show commands
+*		16. Added routines to edit the SENSE_ACT sched table entrys.
+*		17. Changed Sensor.c to do right & left justify on output.
+*
+* V3.16 12/17/2006 wzr
+*		 1. Added Sap Flow 1,2,3,4 to sensor list
+*		 2. Added Sap Flow reading to ACTION.C
+*		 3. Added Sap Flow reading to STBL.C
+*		 4. Added SD Code Ver to sensor list
+*		 5. Added SD Code ver shown on startup
+*
+* V3.15	12/08/2006 wzr
+*		 1. Fixed action.c to not allow slave writes to SRAM if its a STAND-ALONE.
+*			This avoids duplicate messages in FLASH since a STAND-ALONE slave
+*			copies SRAM to FLASH.
+*		 2. Added random radio freq hopping algorithm to radio freq selection
+*
+* V3.14	11/17/2006 wzr
+*		 1. Added a startup announcement that an ECLK has been found.
+*		 2. Added code to compute a CRC for each flash message.
+*		 3. Added code to check the CRC for each uploaded flash msg.
+*		 4. Added a brain message code for flash-crc-errors.
+*		 5. Changed CRC err msg to be original data Except flash CRC msg code
+*		 6. Changed upload signal values to that msg-count cannot mimic TRANS-END.
+*		 7. Added show of CRC deleted msgs at end of upload.
+*		 8. Changed get and put Flashptr routines to force ptrs to msg boundarys
+*		 9. Added ability to skip CRC checking on upload (compile time switch).
+*		10. Added compiler anomalies message routine.
+*		11. Allowed for the OM2 msg pkt to utilize if desired loc 28 & 29 in msg.
+*		12. Added upload message correction before sending.
+*		13. Changed MsgSeqNum to not allow 0 or 255 (for err detection)
+*		14. Added code to check for illegal msg seq numbers
+*		15. Changed timeouts on upload to 10 sec
+*		16. Added code to correct invalid message lengths and zro msg remainders
+*		17. Added code to correct dest entrys in msgs stored in hubs.
+*
+* V3.13	10/11/2006 wzr
+*		 1. Added code to SDLOD.C so that SDLOD can be bypassed by button push.
+*		 2. Added Button_reset to BUTTON.C routine.
+*		 3. Added routine in SLOD.C to set config registers with SDLOD.
+*		 4. Added code in KEY.C date set to check for ECLK on board.
+*		 5. Added code in TIME.C to check for ECLK not ticking.
+*		 6. Added Offline bit in ucFLAG0_BYTE for ECLK not being used.
+*		 7. Added Compensated Battery read routine to MISC.C
+*		 8. Hooked in the compensated Battery read routine to the system
+*		 9. Removed all old battery routines.
+*		10. Changed OM2 to return batt voltage in mV not raw reading.
+*		11. Changed show batt routine to show voltage in volts.
+*		12. Changed Battery Sense routine to reset if battery is bad.
+*		13. Added a message to tell is serial port is polled or interrupt
+*		14. Added reversed (switched to output) Button to use as pullup on ECLK.
+*		15. Changed button interrupt code to never hang.
+*		16. found and fixed bug in button reversal for ECLK.
+*		17. Added code in time_init to NOT allow negative time.
+*
+* V3.12	07/01/2006 wzr
+*		 1. Fixed bug in radio diag, when it was timing out, couldn't quit
+*		 2. Turned off GSUS reporting in action.c
+*		 3. Fixed bug in radio diags to force radio off when leaving.
+*		 4. Fixed bug in button wakeup sequence in dispatcher.
+*		 5. Fixed pwr leak in startup, startup msg didn't shut off radio.
+*		 6. Moved the sensor list defines to SENSOR.H from ACTION.h for clarity
+*		 7. Converted all sensor names to constant length.
+*		 8. Changed Daytime.C names to be more consistent.
+*		 9. Fixed bug in Daytime.c for secs->structs for years after 2016.
+*		10. Added the SDLOD module.
+*		11. Added the ESPORT and ESPORTA module to work with SDLOD
+*		12. Added redirection flag for serial redirected to esport to gain
+*		    functionality quickly.
+*		13. Added code in serial.c to support redirection
+*		14. Implemented redirection bit setting and clearing in ESPORT module
+*		15. converted setbinarymode function to a single function
+*		16. brought up SDLOD so SD can now be programmed from brain.
+*		17. Added another protocol msg to SDLOD transmit for write locked device.
+*
+* V3.11	05/10/2006 wzr
+*		 1. Added test channel to radio channel list
+*		 2. Changed radio diagnostic to use test channel
+*		 3. Changed radio diagnostic to use CRC on messages.
+*		 4. Added a check on ECLK time for reasonability.
+*
+* V3.10	04/13/2006 wzr
+*		 1. Added Pkt flags to OM3
+*		 2. Reduced mast size from 5 bits to 4 bits wide in pkt 2nd byte.
+*		 3. Added Pkt flags passed into BuildOm3 routine.
+*		 4. Added code to catch bat FRAM reads in Stbl initialization level.
+*		 5. Changed discovery code to accept equal level during lost link recovery.
+*		 6. Chagned Diag.h to have SD board always on during tests.
+*		 7. Split out link statistics routine from other systat functions.
+*		 8. converted PRIORITY-USE to PRIORITY-FUNCTION tables for scheduler.
+*		 9. Added show PFUNC (PRIORITY-FUNCTION) name routine.
+*		10. Added Show Stbl action name routine.
+*		11. Added show PFUNC priority routine to systat table.
+*		12. Turned on SD board in RadioX and RadioX2 Diagnostics.
+*		13. Added FRAM test section to BRAINX diagnostics.
+*		14. Fixed bad exit from FRAM1 diagnostic.
+*
+*
+* V3.09	03/27/2006 wzr
+*		 1. Added runtime radio setup word calculation.
+*		 2. Added a readio frequency calculation diagnostic.
+*		 3. Added global radio channel number.
+*		 4. Added radio frequency set routine.
+*		 5. Hooked runtime radio frequency routines into system.
+*		 6. Added routine to set transmit power.
+*		 7. Hooked transmit power routine into FULLdiag.
+*		 8. Moved Radio.h defines into radio.c to reduce define count.
+*		 9. Split discovery and data transmission onto different channels.
+*		10. Added diagnostic to check radio frequency.
+*		11. Hooked in discovery on channel 2 and data on channel 0.
+*		12. Fixed msg size detect in OPMODE.c module.
+*		13. Renamed variables with MSG_SIZE_MINUS_1 to EOM_IDX for clarity.
+*		14. Converte CRC routine to use stk variables instead of globals.
+*		15. Fixed link break counter bug. (was missing link breaks).
+*		16. Moved Scheduler priority list from L2SRAM.H to RTS.H for clarity.
+*		17. Converted Scheduler dispatcher from switch statement to vector table.
+*		18. Changed scheduler slot to be last slot in the NST (fixed location).
+*		19. Put Title and Header lines into showNST routine.
+*		20. Changed showNST to shwo entire NST table.
+*		21. Removed showSingleNSTentry routine from RTS.c.
+*		22. Added a flag to indicate when a wiz has acquired group time.
+*		23. Added a routine to count active SOM2's and ROM2's.
+*		24. Added a scheduler routine to schedule SDC4's.
+*		25. Added a scheduler routine to schedule RDC4's.
+*		26. Moved discovery SDC4 slots to a fixed slot number.
+*		27. Moved discovery RDC4 slots to a fixed slot number.
+*		28. Removed eval SDC4 routine.
+*		29. Removed eval RDC4 routine.
+*		30. Removed DO_evaluate_sts routine.
+*		31. Removed F_USE_RUN_ONLY_IF_SOM2_IS_UP define and its references
+*		32. Removed FLG0_WE_HAVE_AN_SOM2_BIT flag and its references.
+*		33. Removed F_USE_NO_SOM2_REQUIRED flag and its references.
+*		34. Changed name SchedIdx to StblIdx to reflect new module name.
+*		35. Removed convert all slots function from RTC.c.
+*		36. Added compute req slot for SDC4 routine.
+*		37. Added compute slot span for RDC4 routine.
+*		38. Added code to show Battery voltage in milliVolts.
+*		39. Added code to show Battery voltage as a percent of life left.
+*		40. Moved Batt routine from MISC.C to ACTION.C.
+*		41. Added counters for SDC4 and RDC4 attempts.
+*		42. Added counters for ROM2 and SOM2 link attempts.
+*
+*
+* V3.08	03/27/2006 wzr
+*		 1. Ported onewire.c and onewirea.asm from SD to brain.
+*		 2. Added E-clk detect diagnostic
+*		 3. Added E-clk routines to TIME.C
+*		 4. Added E-clk tic diagnostic.
+*		 5. Hooked E-clk into system code.
+*		 6. Found and Fixed onewire startup bug.
+*		 7. Renamed EVENT.C to be SYSACT.c
+*		 8. FIxed E-clk tic problem.
+*		 9. Changed "run" command to "Diagnostic" command.
+*		10. Added timed input routine to KEY.C
+*		11. Hooked timed input routine into system code.
+*		12. Added an uploader diagnostic to check transfers.
+*		13. Ported CRC routine to PC and added it to FBLOD.
+*		14. Hooked in CRC routines to upload code.
+*		15. Added KIOSK streaming flag to the system.
+*		16. Added shadow ram that shadows the FRAM flags.
+*		17. Hooked in routines to switch streaming flag.
+*		18. Hooked streaming in to the system.
+*
+* V3.07	03/16/2006 wzr
+*		 1. Added date diagnostic as recovery from crash.
+*		 2. Corrected date-struct code (restore from crash).
+*		 3. Added numeric date routine.
+*		 4. Added show text date routine.
+*		 5. Daytime module is finished functions are:
+*			1. Dstr -> Dstruct (Date)
+*			2. Tstr -> Tstruct (Time)
+*			3. Dstruct -> sec  (Date)
+*			4. Tstruct -> sec  (Time)
+*			5. Sec -> Dstruct & Tstruct (Date and Time)
+*			6. Dstruct -> Dstr (Date)
+*			7. Tstruct -> Tstr (Time)
+*			8. Dstruct & Tstruct -> SysTime
+*		 6. Hooked time set int Key.c
+*		 7. Hooked Set date into Key.c
+*		 8. Removed display time from Key.c
+*		 9. Removed master Systime routime from time module.
+*		10. Made spokes and hubs start time from last good runtime.
+*		11. Removed set systime from bytes routine from the time module.
+*		12. Removed time reset after hibernation.
+*		13. Added date & time to startup message.
+*		14. Added date an time to slot msg.
+*		15. Changed date routine to accept 4 digit year entrys
+*		16. Removed the 20 from the date year for short ver
+*		17. Hooked time into show sched tbl routines.
+*		18. Updated brain gross component test in diagnostics.
+*		19. Updated radio test part 1 in diagnostics.
+*		20. Added radio test part 2 to	diagnostics.
+*
+* V3.06	02/07/2006 wzr
+*		 1. Added Thermo.c (Kun code) to the the link.
+*		 2. Added a routine to show Deg-C.
+*		 3. Wired up Fulldiag.c to use Kun code to see Deg-C in diagnostics
+*		 4. Added a Deg-C to Deg-F conversn so that diagnostics can see Deg_F.
+*		 5. Fixed continuous loop problem in diagnostics that happens when
+*		    operator selects exit on diagnostic choice.
+*		 6. Removed special code for DukeTest compile.
+*		 7. Fixed test message buffer size to be full size.
+*		 8. Added date module to the link.
+*
+* V3.05	01/19/2006 wzr
+*		 1. Changed TC diag to be in columns for better reading
+*		 2. Changed This ver to show Systat
+*		 3. Changed ROM2 and SOM2 counter to show names in Rad40.
+*		 4. Changed ID change to show the character set available.
+*		 5. Converted the SRAM msg Q to a fixed blk size to avoid chaining
+*		    errors from one error on the all the messages.
+*		 6. Fixed radio link failure to account the correct unit.
+*		 7. Changed opmode and discover to show rad40 names.
+*		 8. Fixed rom2 and som2 msg counters to handle more than 5 links.
+*		 9. Changed NST table to show Rad40.
+*		10. Added a restart command for command line restarting.
+*		11. Added Hub/Spoke switching at runtime
+*		12. Added Restore FRAM command.
+*		13. Changed zro flash cmd to only zro flash not restore entire FRAM.		
+*
+* V3.04	01/15/2006 wzr
+*		 1. Added 2 new modules STBL.C, KEYACT.C so that operator can setup
+*		    the wiz any way he/she wishes.
+*		 2. Moved the startup event table into FRAM
+*		 3. Moved the system config flags into FRAM
+*		 4. Moved the system ID into FRAM
+*		 5. All of this with an eye to giving user control over system setup
+*		    by keyboard control and by outbound messaging
+*		 6. Added code to do multple character key commands.
+*
+* V3.03	11/17/2005 wzr
+*		 1. Added code to be able to do sensor diagnostics at runtime.
+*		 2. Added new module to be able to convert sensor numbers to names.
+*
+* V3.02 11/14/2005 wzr
+*		 1. Added code to allow slaves to backup to flash
+*		 2. Added code to build the Humbolt test code.
+*		 3. Added codt to be able to block startup of discovery entry
+*		 4. Changed Sram storage to be a Q instead of a stack.
+*		 5. Added code to find the lost connection bug.  Added timer T0 module.
+*		 6. Added all the code to make variable load factors.
+*		 7. Moved the missed msg counter for som2 and rom2 to hi part of sts tbl word.
+*		    in anticipation of placing the load factor in the low byte.
+*		 8. Fixed the SD board so it sleeps.
+*		 9. Discovered a bug in the radio -- radio not transmitting.
+*		10. Fixed the radio bug -- it was an error in the macro.inc file
+*		11. Installed C compiler V2.40
+*		12. added new generic double unit sampling to ACTION.c
+*		13. Changed duke_1A, Duke_1b, Duke_1c and Duke_1d to TC-12, TC-34, LT-12, LT-34
+*		14. Changed TC-12 and TC-34 to use double unit sampling
+*		15. Added code to handle 3 new vaisala actions.
+*		16. Converted sampling action startups to be table driven.
+*		17. Made setup of sampling routines to use tables.
+*		18. Added Load Factor to msg OM2.
+*		19. Added code to find the MAX NST INDEX bug
+*		20. Killed the Flash Hang bug by making the Flash wait loops time out.
+*		21. Added ret load factor the msg OM3.
+*
+* V3.01 07/09/2005 wzr
+*		 1. Converted the c compilations to large model (going over 64k).
+*
+* V3.00 03/05/2005 wzr
+*		 1. ReWrote the scheduler
+*		 2. ReWrote the Dispatcher
+*		 3. Added a second clock to keep time when a big change happens
+*		 4. Removed Old discovery
+*		 5. Implemented Re-discovery
+*		 6. Added 6 byte subtract
+*		 7. Added T3 subsec timer
+*		 8. Put Serial output on the interrupt
+*		 9. Added Timer 3
+*
+* V2.03	01/18/2005 wzr
+*		 1. Added code to handle the FRAM and the FLASH.
+*		 2. Corrected the slave SPI code so that on power up the brain drains
+*		    any residual charge off the slave SPI port before the brain checks
+*		    to see if the SPI is ready.
+*		 3. Created so that ver V2.02 is what we sent to DUKE
+*
+* V2.02 06/24/2004 wzr
+*		 1. Testing of next revision of the hardware for WIZ2
+*
+* V2.01 04/15/2004 wzr
+*		 1. Converted the code to run under PIC 18F8720
+*
+* V2.00 04/15/2004 wzr
+*		 1. Copy of latest ver under the PIC452 from wiz1
+*
+* V1.20 04/07/2004 wzr
+*		 1. Converted the system to run under win98
+*
+* V1.19	02/24/2004 wzr
+*		 1. Added the GID checking code for Discovery.
+*		 2. Cosmetic fix to renumber the messages to correct the order.
+*		 3. Added space in all message headers for GID.
+*		 4. Split the DC3 rand table from being overlaid by NST.
+*		 5. Changed DC1 endtime from a 4 byte value to a 1 byte value.
+*		 6. Found a bug in the delay in bringing up the serial port after sleep
+*		    corrected to increase the delay for resistor R26 removal.
+*
+* V1.18	02/16/2004 wzr
+*		 1. Copied over to preserve copy so we can go to next level.
+*
+* V1.17	02/16/2004 wzr
+*		 1. Skipped this ver to preserve a source image that may have code
+*		    we may want some day.
+*
+* V1.16	01/21/2004 wzr
+*	     1. Turned off the radio for diagnostics.
+*		 2. Added code to trap the second missed transmission bug.
+*		 3. Added code to turn off startup transmissions for diagnostics.
+*		 4. Added header messages to all diagnostic routines.
+*		 5. Killed the missed transmission bug. Discovery was passing
+*		    a bad sync time which gave the transmitter and receiver different
+*		    times so they missed their appointments.
+*		 6. walked through code to make sure NST entries of zero are legal
+*		 7. Split out Diagnostics into a separate module.
+*		 8. Split out Discovery into a separate module.
+*		 9. Changed the Dash from a rom string to a surboutine that can vary the
+*		    length of the dash.
+*		10. Added code to print out snifffer intro message for the user.
+*		11. Moved the serial number and Hub/Spoke handling out to a
+*		    separate module for faster compiling.
+*		12. Fixed startup so that it prints before hibernation and after
+*		    hibernation so that user can find out what the serial number is.
+*		13. Installed a delay for the button so that tree bumps won't look
+*		    look like a button push
+*		14. Fixed the 16 bit internal clock rollover bug.
+*		15. Fixed the 16 bit internal clock rollover bug.
+*		16, Code has gone through Alpha test --- adding patches for bugs and
+*		    deficiencies.
+*
+* V1.15	05/27/2003 wzr
+*		 1. Started the operation mode section of the code.
+*
+* V1.14 03/31/2003 wzr
+*		 1. separated the compilations so that Hubs and Spokes are separated,
+*		 2. separated compilations so that serial numbers     are separated.
+*		 3. Added parameterizations for message indexes and added calculations
+*		    for message lengths in tics.
+*
+* V1.13 12/12/2002 wzr
+*		 1. starting the diagnostics.
+*		 2. Connected int to C
+*		 3. split ints into priorities
+*		 4. connect ram storage at int level to ram storage at ground level
+*		 5. Verified LED is working
+*		 6. Found and fixed odd address bug in the loader
+*		 7. Compacted the code in SERIAL.C
+*		 8. Verified Serial output routines.
+*		 9. Verified Serial input routines.
+*		10. Installed and tested the new C18 compiler V2.10 works
+*
+* V1.12 11/08/2002 wzr
+*		 1. Converting this code over to the 18F8720 processor and the PICMICRO
+*		    C18 compiler.
+*
+* V1.11 10/21/2002 wzr
+*		 1. Starting in on the network discovery setion of main.
+*		 2. Removed the real time clk from the hardware and are now using
+*		    Timer 1 to implement a julian real time clk.
+*		 3. Cleaned out all the old code from I2C and CLK.
+*		 4. Added module random number generator.
+*		 5. Added compiler switches so that Hubs and Spokes can be separated
+*		    and added compiler switches to enter serial numbers.
+*
+* V1.10 10/07/2002 wzr
+*		 1. Incorporating the CRC calculattion module.
+*		 2. Added two new modules I2C and CLK.
+*		 3. Added new module MISC for various routines that have no home.
+*		 4. Added new module DISK0 for static ram routine.
+*
+* V1.09 09/11/2002 wzr
+*		 1. The half duplex radio link is working and we are now implementing a
+*		    ver that takes periodic temperature data, and sends it out to the
+*		    other computer.
+*		 2. We ran out of bank0 memory in the compiler and got diverted to
+*		    retrieving more memory for the compiler.  Step one is to convert
+*		    the radio code to 10MHZ clk for testing purposes.
+*		 3. Moved the msg_buffer to bank2 so bank 0 will have more room.
+*		 4. Added timer routine for approx delays.
+*		 5. Changed A/D routine to do averaging on demand.
+*
+*
+* V1.08 09/05/2002 wzr
+*		 1. Transmitter and receiver are working with the Brent radio boards
+*		    and this ver is to hookup a half duplex com link between
+*		    computers.
+*		 2. Changed the receiver so that it no longer waits for a transmission.
+*		    The call starts up the interrupt receiver and then immediately returns
+*		    to the caller.  Communication between ground and interrupt level is
+*		    accomplished via the flag1_byte & flag2_byte.
+*		 3. Found numerous bugs relating to bit placement and union definitions,
+*		    Finally forced the flag bytes and latch bytes to fixed locations so
+*		    that the compiler was happy.
+*
+* V1.07 08/29/2002 wzr
+*		 1. Patched a bug in the transmitter init code that was causing an init
+*		    error in the radio.
+*		 2. Changed transmitter calculation for new radio clk and added ability
+*		    to do on the fly channel calculation and selection.
+*
+* V1.06 08/28/2002 wzr
+*		This is simply a clean-up ver of V1.05, where all the missing
+*		defines have been setup and we are getting ready for the new ground
+*		that will be covered now that we have achieved the C-ASM merger.
+*
+* V1.05	08/28/2002 wzr
+*		This is now the new base line.  We have got 'C' calling the radio
+*		send and receive routines that are imbedded in CSTARTUP.ASM.  They
+*		share a common file called flags.h that has the usage of the 
+*		oscilliscope pulses defined.  The 'C' compiler we are using is IAR's
+*		ver V2.20A/W32 and the assembler is IAR's also.
+*
+* V1.02	08/12/2002 wzr
+*		Adding a C dummy function to C which looks like the ASM radio routines.
+*
+* V1.01 08/08/2002 wzr
+*		Converting this to a simple C shell program to shoehorn in the
+*		asm radio routines
+*
+* V1.00 05/03/2002 wzr
+*		Started
+*

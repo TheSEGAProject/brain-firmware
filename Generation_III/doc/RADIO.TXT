@@ -1,0 +1,192 @@
+
+/*********************  RADIO FREQUENCY CALCULATIONS  *************************
+*
+* The formula for conversion of frequency to setup word is as follows:
+*
+*                     target_freq       2**24
+*   setup_Word =     ______________ * _______             (Equation 1)
+*                     chip_clk_freq     NPLL
+*
+*
+*   Where: Setup_Word:     is the value to be set in the chip registers.
+*          target_freq:    is the desired frequency.
+*          chip_clk_freq:  is the freq of the radio crystal = 25,600,000
+*          NPLL:           is the freq clock divider = 256 or 512
+*
+*
+*   Frequency is stepped in steps of 200,000Hz.  The step size is chosen
+*   so that one step will not intersect another. In other words a channel
+*   size (step size) is chosen so that it will not jam the adjacent channels.
+*
+*   The second consideration in choosing target frequency is the legal range
+*   allowed for unlicensed wireless.  The North American unlicenced ISM
+*   band is 902MHZ to 928MHZ.
+*
+*   Computing the number of channels of size 200,000Hz in the Unlicensed band
+*   yields:
+*
+*           928,000,000Hz - 902,000,000Hz    26,000,000
+*           ____________________________  =  __________  = 130 channels
+*                   200,000                    200,000
+*
+*
+*   So the :
+*
+*   target_freq = base_freq + (chan_width * N)             (Equation 2)
+*
+*   Where:
+*          base_freq:      is the lowest frequency allowed = 902,000,000Hz
+*          chan_width:     is the width explained above    =     200,000Hz
+*          N:              is the target channel number (from 0 to 129)
+*
+*
+*
+*   Plugging equation 2 into equation 1 yields:
+*
+*                 base_freq + (chan_width * N)    2**24
+*   Setup_Word =   __________________________  * _______   (Equation 3)
+*                       chip_clk_freq              NPLL
+*
+*     
+*
+*
+*   Supplying the constants: base_freq =      902,000,000
+*                            chan_width =         200,000
+*                            Radio_clk_freq =  25,600,000
+*                            NPLL =                   512
+*
+*
+*   We get:
+*
+*
+*                  902,000,000 + (200,000 * N)    2**24
+*   Setup_Word =   __________________________  * _______
+*                         25,600,000               512
+*
+*
+*   Noting that: 902,000,000 =  200,000 * 4510
+*                        512 =          2**9
+*                 25,600,000 =  200,000 * 128
+*                        128 =          2**7
+*
+*
+*   Factoring we get:
+*
+*                  200,000 *  (4510 + N) * (2**24)
+*   Setup_Word =   ________________________________
+*                     200,000 * (2**7)   * (2**9)
+*
+*
+*   Doing the obvious divisions we get:
+*
+*
+*
+*   Setup_Word =  (4510 + N) * (2**8)
+*
+*
+*   Converting to computerees we get:
+*
+*
+*   Setup_Word =  (4510 + N) << 8
+*
+*   From a computer calculation point of view 2**8 is a single byte
+*   so we simply calculate N + 4510 and add an extra byte of zeros to
+*   arrive at the setup_word value.  In other words we can calculate the
+*   setup_word do doing a single integer addition!!!
+*
+*
+*---------------------------------------------------------------------------
+*
+*   For the RECEIVER calculation we get a slightly different formulation.
+*
+*   The receiver base frequency is offset from the transmitter frequency
+*   by 10,700,000Hz (intermediate frequency) plus 50,000Hz (separation
+*   bewtween 0 and 1).
+*
+*
+*
+*   Returning to equation 3. We have:
+*
+*
+*                  base_freq + (chan_width * N)    2**24
+*   Setup_Word =   __________________________  * _______   (Equation 3)
+*                     chip_clk_freq                NPLL
+*
+*     
+*   base_freq = 902,000,000 - 10,700,00 + 50,000
+*             = 902,000,000 - 10,200,000
+*             = 891,800,000
+*
+*
+*   Supplying the constants: base_freq =      891,350,000
+*                            chan_width =         200,000
+*                            Radio_clk_freq =  25,600,000
+*                            NPLL =                   512
+*
+*
+*   We get:
+*
+*
+*                  891,350,000 + (200,000 * N)     2**24
+*   Setup_Word =   __________________________  * _______
+*                         25,600,000                512
+*
+*
+*   Noting that: 891,350,000 =  3125 * (2**4) * 17827
+*                    200,000 =  3125 * (2**6)
+*                        512 =          2**9
+*                 25,600,000 =  3125 * (2**13)
+*
+*
+*   Plugging in:
+*
+*                  (3125*(2**4)*17827 + (3125*(2**6) * N))*(2**24)
+*   Setup_Word =   ______________________________________________
+*                         3125*(2**13)                    *(2**9)
+*
+*
+*   Doing the obvious divisions we get:
+*   Setup_Word = ((2**4)*17827 + ((2**6) * N))     *(2**2)
+*
+*
+*   Factoring we get:
+*   Setup_Word = (17827 + ((2**2) * N))     *(2**6)
+*
+*
+*   Arriving at:
+*   Setup_Word = (17827 + 4N) * (2**6)
+*
+*    
+*   Bringing the 2**6 inside the parenthesis we get:
+*   Setup_Word =  (17827*64) + N*256
+*
+*
+*   Multiplying it out we get:
+*   Setup_Word =  1,140,928 + N*256
+*    
+*
+*   Converting to Hex to show it better:
+*   Setup_Word =  1168C0h + N*256
+*
+*
+*   Splitting the constant by subtracting off the C0h we get:
+*   Setup_Word =  116800h+ C0h + N*256
+*
+*
+*   Combining the 1st and 3rd addens and factoring we get:
+*   Setup_Word =  ((1168h + N) * 2**8) + C0h
+*
+*
+*   Converting 1168H back to base 10 we get:
+*   Setup_Word =  (((4456 + N) * (2**8)) + C0h
+*
+*
+*   Again from a computer calculation point of view 2**8 is a single byte
+*   so we simply calculate N + 4456 and tack on an extra low order byte of C0h
+*   to arrive at the setup_word value.  In other words we can again calculate
+*   the setup_word do doing a single integer addition and an OR!!!
+*
+*
+******************************************************************************/
+
+
